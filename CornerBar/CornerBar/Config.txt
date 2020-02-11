@@ -1,0 +1,9 @@
+﻿LightForegroundColor,FFFFFF
+StdButtonBack,211F20
+StdButtonText,FFFFFF
+StdButtonBorder,1E4759
+TextColor,211F20
+PickerTextColor,FFFFFF
+DarkForegroundColor,1E4759
+VersionForegroundColor,000000
+GlobalBackground,F0F0F0

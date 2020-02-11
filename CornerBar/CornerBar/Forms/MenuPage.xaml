@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:helpers="clr-namespace:CornerBar.Helpers;assembly=CornerBar"
+             x:Class="CornerBar.Forms.MenuPage"
+             xmlns:classes="clr-namespace:CornerBar.Classes;assembly=CornerBar"
+             NavigationPage.HasNavigationBar="False">
+  <ContentPage x:Name="Cp1">
+    <StackLayout>
+        <Label Text="{helpers:Translate Page1Desc}" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Margin="5" TextColor="{DynamicResource TextColor}" >
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped"/>
+            </Label.GestureRecognizers>
+            </Label>
+                <classes:PinchToZoomContainer>
+        <classes:PinchToZoomContainer.Content>
+            <Image x:Name="Page1" Source="{helpers:Translate Page1}" />
+        </classes:PinchToZoomContainer.Content>
+        </classes:PinchToZoomContainer>
+    </StackLayout>
+  </ContentPage>
+  <ContentPage x:Name="Cp2">
+    <StackLayout>
+        <Label Text="{helpers:Translate Page2Desc}" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Margin="5" TextColor="{DynamicResource TextColor}" />
+        <classes:PinchToZoomContainer>
+            <classes:PinchToZoomContainer.Content>
+                    <Image x:Name="Page2" Source="{helpers:Translate Page2}" />
+            </classes:PinchToZoomContainer.Content>
+        </classes:PinchToZoomContainer>
+        </StackLayout>
+  </ContentPage>
+  <ContentPage>
+    <StackLayout>
+        <Label Text="{helpers:Translate Page3Desc}" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Margin="5" TextColor="{DynamicResource TextColor}" />
+        <classes:PinchToZoomContainer>
+            <classes:PinchToZoomContainer.Content>
+                    <Image x:Name="Page3" Source="{helpers:Translate Page3}" />
+            </classes:PinchToZoomContainer.Content>
+        </classes:PinchToZoomContainer>
+        </StackLayout>
+  </ContentPage>
+    <ContentPage>
+        <StackLayout>
+            <Label Text="{helpers:Translate Page4Desc}" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Margin="5" TextColor="{DynamicResource TextColor}" />
+            <classes:PinchToZoomContainer>
+                <classes:PinchToZoomContainer.Content>
+                    <Image  x:Name="Page4" Source="{helpers:Translate Page4}" />
+                </classes:PinchToZoomContainer.Content>
+            </classes:PinchToZoomContainer>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage>
+        <StackLayout>
+            <Label Text="{helpers:Translate Page5Desc}" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Margin="5" TextColor="{DynamicResource TextColor}" />
+            <classes:PinchToZoomContainer>
+                <classes:PinchToZoomContainer.Content>
+                    <Image x:Name="Page5" Source="{helpers:Translate Page5}" />
+                </classes:PinchToZoomContainer.Content>
+            </classes:PinchToZoomContainer>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage>
+        <StackLayout>
+            <Label Text="{helpers:Translate Page6Desc}" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Margin="5" TextColor="{DynamicResource TextColor}" />
+            <classes:PinchToZoomContainer>
+                <classes:PinchToZoomContainer.Content>
+                    <Image x:Name="Page6" Source="{helpers:Translate Page6}" />
+                </classes:PinchToZoomContainer.Content>
+            </classes:PinchToZoomContainer>
+        </StackLayout>
+    </ContentPage>
+</CarouselPage>

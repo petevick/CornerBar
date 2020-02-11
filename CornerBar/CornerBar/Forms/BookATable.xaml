@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CornerBar.Forms.BookATable"
+             xmlns:helpers="clr-namespace:CornerBar.Helpers;assembly=CornerBar"
+             xmlns:vm="clr-namespace:DataBinding.ViewModels;assembly=DataBinding"
+             xmlns:models="clr-namespace:CornerBar.Models;assembly=CornerBar"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="White"
+   
+             >
+  <ContentPage.Padding>
+      <OnPlatform x:TypeArguments="Thickness">
+          <On Platform="Android">0,0,0,0</On>
+          <On Platform="iOS">0,20,0,0</On>
+          <On Platform="UWP, WinPhone">0,0,0,0</On>
+      </OnPlatform>
+    </ContentPage.Padding>
+  <ScrollView>
+  <Grid VerticalOptions="Fill" HorizontalOptions="Fill"  BackgroundColor="White" Padding="8,4,8,8" RowSpacing="8" ColumnSpacing="8">
+    <Grid.BindingContext>
+      <models:MainPageViewModel />
+    </Grid.BindingContext>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto"/>
+      <ColumnDefinition Width="Auto"/>
+      <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <!--<RowDefinition Height="Auto"/>-->
+      <RowDefinition>
+        <RowDefinition.Height>
+          <OnPlatform x:TypeArguments="GridLength" iOS="48 " Android="48" WinPhone="48"/>
+        </RowDefinition.Height>
+      </RowDefinition>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+    <Image x:Name="imgLogo" Source="{StaticResource LogoFile}" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="0" Grid.ColumnSpan="3" />
+    <Label Text="{helpers:Translate BookingDate}" Grid.Column="0" Grid.Row="1" HorizontalOptions="EndAndExpand" TextColor="{DynamicResource TextColor}" VerticalOptions="EndAndExpand" FontSize="Medium"/>
+    
+    <DatePicker x:Name="pckDate" Grid.Column="1" Grid.Row="1" HorizontalOptions="StartAndExpand" BackgroundColor="{DynamicResource TextColor}" TextColor="{DynamicResource PickerTextColor}" VerticalOptions="EndAndExpand" Format="dd/MMM/yyyy" DateSelected="DatePicker_OnDateSelected"  />
+    <Label Text="{helpers:Translate Time}" Grid.Column="0" Grid.Row="2" HorizontalOptions="EndAndExpand" TextColor="{DynamicResource TextColor}" VerticalOptions="EndAndExpand" FontSize="Medium"   />
+    <Grid Grid.Column="1" Grid.Row="2" Padding="0,0,0,0" HorizontalOptions="StartAndExpand" BackgroundColor="{DynamicResource TextColor}">
+                <TimePicker x:Name="pckTime"   HorizontalOptions="StartAndExpand" BackgroundColor="{DynamicResource TextColor}" TextColor="{DynamicResource PickerTextColor}"  VerticalOptions="EndAndExpand"  PropertyChanged="PckTime_OnPropertyChanged"  Time="{Binding BookingTime, Mode=TwoWay}"   />
+      </Grid>
+    <Grid  VerticalOptions="Fill" HorizontalOptions="Fill"  BackgroundColor="White" Padding="8,4,8,8" RowSpacing="8" ColumnSpacing="8" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="3">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="Auto"/>
+        <ColumnDefinition Width="Auto"/>
+        <ColumnDefinition Width="*"/>
+      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+      </Grid.RowDefinitions>
+      <Label Text="{helpers:Translate People}" Grid.Column="0" Grid.Row="0" HorizontalOptions="EndAndExpand" TextColor="{DynamicResource TextColor}" VerticalOptions="EndAndExpand" FontSize="Medium"/>
+      <Label x:Name="lblPeople" Text="4" Grid.Column="1" Grid.Row="0" HorizontalOptions="Start" TextColor="{DynamicResource TextColor}" VerticalOptions="EndAndExpand" FontSize="Large"/>
+      <Stepper Grid.Column="2" Grid.Row="0" HorizontalOptions="Start"  BackgroundColor="{DynamicResource TextColor}"  Minimum="1" Maximum="12" Increment="1" Value="4" VerticalOptions="Center" ValueChanged="Stepper_OnValueChanged" />
+    </Grid>
+
+    <Label Text="{helpers:Translate Occasion}" Grid.Column="0" Grid.Row="4" HorizontalOptions="EndAndExpand" TextColor="{DynamicResource TextColor}" VerticalOptions="EndAndExpand" FontSize="Medium"/>
+            <Picker x:Name="pckOccasion" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" HorizontalOptions="StartAndExpand" BackgroundColor="{DynamicResource TextColor}"  TextColor="{DynamicResource PickerTextColor}" VerticalOptions="EndAndExpand" />
+    <Label Text="{helpers:Translate email}" Grid.Column="0" Grid.Row="5" HorizontalOptions="EndAndExpand" TextColor="{DynamicResource TextColor}" VerticalOptions="EndAndExpand" FontSize="Medium"/>
+    <Entry x:Name="txtemail" Grid.Column="1" Grid.Row="5"  Grid.ColumnSpan="2" PlaceholderColor="Silver" Placeholder="{helpers:Translate email}" TextColor="{DynamicResource TextColor}" VerticalOptions="EndAndExpand" Keyboard="Email"  >
+      <Entry.Behaviors>
+        <helpers:EmailValidatorBehavior x:Name="emailValidator"/>
+      </Entry.Behaviors>
+    </Entry>
+    <Label Text="{helpers:Translate Telephone}" Grid.Column="0" Grid.Row="6" HorizontalOptions="EndAndExpand" TextColor="{DynamicResource TextColor}" VerticalOptions="EndAndExpand" FontSize="Medium"/>
+    <Entry x:Name="txtphone" Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2" PlaceholderColor="Silver" Placeholder="{helpers:Translate Telephone}" TextColor="{DynamicResource TextColor}" VerticalOptions="EndAndExpand" Keyboard="Telephone"  >
+    </Entry>
+    <Grid  VerticalOptions="Fill" HorizontalOptions="Fill"  BackgroundColor="White" Padding="8,4,8,8" RowSpacing="8" ColumnSpacing="8" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="7">
+      <Grid.ColumnDefinitions>
+        <!--<ColumnDefinition Width="30"/>-->
+        <ColumnDefinition Width="*"/>
+        <!--<ColumnDefinition Width="30"/>-->
+      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+      </Grid.RowDefinitions>
+      <!--<Button x:Name="btnBook" Text="{helpers:Translate BookIt}" Grid.Column="0" Grid.Row="0" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Style="{StaticResource StandardButton}" Clicked="BtnBook_OnClicked" />-->
+      <Button Grid.Column="0" Grid.Row="0" x:Name="btnBook" Text="{helpers:Translate BookIt}" Clicked="BtnBook_OnClicked" Style="{StaticResource StandardButton}" />
+    </Grid>
+    <Grid  VerticalOptions="Fill" HorizontalOptions="Fill"  BackgroundColor="White" Padding="8,4,8,8" RowSpacing="8" ColumnSpacing="8" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="8">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="4"/>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="4"/>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="4"/>
+      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+      </Grid.RowDefinitions>
+                <Button x:Name="btnPhone" Text="{helpers:Translate PhoneUS}" Grid.Column="1" Grid.Row="0"  Style="{DynamicResource TwoLineButton}"  Clicked="BtnPhone_OnClicked"  >
+      <Button.Image>
+        <OnPlatform x:TypeArguments="FileImageSource">
+          <OnPlatform.iOS>
+            <FileImageSource File="icon_phone64.png"/>
+          </OnPlatform.iOS>
+          <OnPlatform.Android>
+            <FileImageSource File="icon_phone64.png"/>
+          </OnPlatform.Android>
+          <OnPlatform.WinPhone>
+            <FileImageSource File="icon_phone64.png"/>
+          </OnPlatform.WinPhone>
+   </OnPlatform>
+      </Button.Image>
+      </Button>
+                <Button x:Name="btnEmail" Text="{helpers:Translate emailUS}" Grid.Column="3" Grid.Row="0" Style="{DynamicResource TwoLineButton}" Clicked="BtnEmail_OnClicked">
+      <Button.Image>
+        <OnPlatform x:TypeArguments="FileImageSource">
+          <OnPlatform.iOS>
+            <FileImageSource File="icon_email64.png"/>
+          </OnPlatform.iOS>
+          <OnPlatform.Android>
+            <FileImageSource File="icon_email64.png"/>
+          </OnPlatform.Android>
+          <OnPlatform.WinPhone>
+            <FileImageSource File="icon_email64.png"/>
+          </OnPlatform.WinPhone>
+        </OnPlatform>
+      </Button.Image>
+      </Button>
+    </Grid>
+  </Grid>
+</ScrollView>
+
+</ContentPage>

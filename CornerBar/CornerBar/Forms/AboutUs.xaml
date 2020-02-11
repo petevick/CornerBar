@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:helpers="clr-namespace:CornerBar.Helpers;assembly=CornerBar"
+             xmlns:vm="clr-namespace:DataBinding.ViewModels;assembly=DataBinding"
+             xmlns:models="clr-namespace:CornerBar.Models;assembly=CornerBar"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="CornerBar.Forms.AboutUs">
+  <ContentPage.Padding>
+      <OnPlatform x:TypeArguments="Thickness">
+          <On Platform="Android">0,0,0,0</On>
+          <On Platform="iOS">0,20,0,0</On>
+          <On Platform="UWP, WinPhone">0,0,0,0</On>
+      </OnPlatform>
+    </ContentPage.Padding>
+  <Grid VerticalOptions="Fill" HorizontalOptions="Fill" RowSpacing="0" BackgroundColor="White">
+    <Grid.BindingContext>
+      <models:MainPageViewModel />
+    </Grid.BindingContext>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+       <RowDefinition Height="140"/>
+      <RowDefinition Height="16"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="16"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="16"/>
+      <RowDefinition Height="32"/>
+      <RowDefinition Height="32"/>
+      <RowDefinition Height="32"/>
+        </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="10"/>
+      <ColumnDefinition Width="*"/>
+      <ColumnDefinition Width="10"/>
+    </Grid.ColumnDefinitions>
+    <Image x:Name="imgLogo" Source="{StaticResource LogoFile}" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="1"  />
+    <Label x:Name="lblHeading" Grid.Column="1" Grid.Row="1" Text="" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Large" TextColor="{DynamicResource TextColor}"/>
+    <Image Grid.Row="2"  Grid.Column="1" x:Name="imgCarousel1" Source="Food1.jpg"  Aspect="AspectFill" />
+    <Image Grid.Row="2"  Grid.Column="1" x:Name="imgCarousel2" Source="Food1.jpg" Opacity="0.0"   Aspect="AspectFill"/>
+    <Image Grid.Row="3"  Grid.Column="1" Source="line_shadow.png" HorizontalOptions="Fill" HeightRequest="8" Aspect="Fill"/>
+    <!--<Label x:Name="lblDetails" Grid.Column="1" Grid.Row="4" Text="" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black" FontSize="Small" />-->
+
+    <Button Grid.Column="1" Grid.Row="4" x:Name="btnBook" Text="{helpers:Translate Book}" Clicked="BtnBook_OnClicked" Style="{StaticResource StandardButton}" IsVisible="True" />
+    <!--<Label  Grid.Column="1" Grid.Row="6" Text="" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" TextColor="Black"/>-->
+    <Image Source="line_shadow.png" Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="3" />
+
+      <ScrollView Grid.Row="6" Grid.Column="1" VerticalOptions="Fill" HorizontalOptions="Fill" >
+          <Label x:Name="lblBlurb" FontSize="Small" TextColor="{DynamicResource TextColor}" Text="{helpers:Translate AboutBlurb}"/>
+      </ScrollView>
+
+
+
+    <Image Source="line_shadow.png" Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="3" />
+    <!--<Grid x:Name="grdGui" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="10">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="64"/>
+        <RowDefinition Height="*"/>
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"/>
+      </Grid.ColumnDefinitions>-->
+      <Image Source="GUILogo.png" Grid.Column="1" Grid.Row="8" HeightRequest="32" WidthRequest="32"  HorizontalOptions="Center" VerticalOptions="End">
+        <Image.GestureRecognizers>
+          <TapGestureRecognizer Tapped="GUI_OnTapped"/>
+        </Image.GestureRecognizers>
+      </Image>
+    <Label x:Name="lblGUI" Grid.Row="9" Grid.Column="1" HorizontalOptions="CenterAndExpand" FontSize="Medium" Text="App created by GUI Innovations" VerticalOptions="End" TextColor="#336699">
+      <Label.GestureRecognizers>
+        <TapGestureRecognizer Tapped="GUI_OnTapped"/>
+      </Label.GestureRecognizers>
+    </Label>
+      <Label x:Name="lblVersion" Grid.Column="1" Grid.Row="10" Text="" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Small" TextColor="{DynamicResource TextColor}"/>
+        <!--</Grid>-->
+  </Grid>
+</ContentPage>

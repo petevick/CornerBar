@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:helpers="clr-namespace:CornerBar.Helpers;assembly=CornerBar"
+             x:Class="CornerBar.Forms.MainPage"
+             NavigationPage.HasNavigationBar="False"
+              BackgroundColor="White">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="Android">0,0,0,0</On>
+            <On Platform="iOS">0,20,0,0</On>
+            <On Platform="UWP, WinPhone">0,0,0,0</On>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <Grid VerticalOptions="Fill" HorizontalOptions="Fill" RowSpacing="0" BackgroundColor="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition>
+                <RowDefinition.Height>
+                    <OnPlatform x:TypeArguments="GridLength">
+                        <On Platform="Android, UWP, WinPhone">200</On>
+                        <On Platform="iOS">180</On>
+                    </OnPlatform>
+                </RowDefinition.Height>
+            </RowDefinition>
+            <!--<RowDefinition Height="Auto"/>-->
+            <RowDefinition Height="8"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Image x:Name="imgLogo1" Source="{StaticResource LogoFile}" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="0" />
+        <Image Grid.Row="1" x:Name="imgCarousel1" Source="Carousel1.jpg"  VerticalOptions="Start" HorizontalOptions="Center" />
+        <Image Grid.Row="1" x:Name="imgCarousel2" Source="Carousel1.jpg" Opacity="0.0"  VerticalOptions="Start" HorizontalOptions="Center"/>
+        <Image Grid.Row="2" Source="line_shadow.png" HorizontalOptions="Fill" HeightRequest="8" Aspect="Fill"/>
+        <ScrollView Grid.Row="3" VerticalOptions="Fill" HorizontalOptions="Fill" >
+            <Grid VerticalOptions="Fill" HorizontalOptions="Fill" Padding="8,4,8,8" RowSpacing="4" ColumnSpacing="8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="8"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="8"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <!--<RowDefinition Height="*"/>-->
+                    <RowDefinition>
+                        <RowDefinition.Height>
+                            <OnPlatform x:TypeArguments="GridLength">
+                                <On Platform="Android">24</On>
+                                <On Platform="iOS">32</On>
+                                <On Platform="UWP, WinPhone, Windows">*</On>
+                            </OnPlatform>
+                        </RowDefinition.Height>
+                    </RowDefinition>
+                    <RowDefinition>
+                        <RowDefinition.Height>
+                            <OnPlatform x:TypeArguments="GridLength">
+                                <On Platform="Android">24</On>
+                                <On Platform="iOS">32</On>
+                                <On Platform="UWP, WinPhone, Windows">*</On>
+                            </OnPlatform>
+                        </RowDefinition.Height>
+                    </RowDefinition>
+                    <RowDefinition Height="*"/>
+                    <!--RowDefinition Height="*"/>-->
+                </Grid.RowDefinitions>
+
+                <Button Grid.Column="1" Grid.Row="0" x:Name="btnMenu" Text="{helpers:Translate OurMenu}" Clicked="BtnMenu_OnClicked" Style="{DynamicResource TwoLineButton}"/>
+
+                <Button Grid.Column="2" Grid.Row="0"  x:Name="btnBook" Text="{helpers:Translate Book}" Clicked="BtnBook_OnClicked" Style="{DynamicResource TwoLineButton}" />
+
+                <Button Grid.Column="1" Grid.Row="1" x:Name="btnContact" Text="{helpers:Translate ContactUs}" Clicked="BtnContact_OnClicked" Style="{DynamicResource TwoLineButton}"/>
+
+                <!--<Button Grid.Column="1" Grid.Row="1" x:Name="btnDrinks" Text="{helpers:Translate OrderDrinks}"  Clicked="BtnDrinks_OnClicked" Style="{StaticResource StandardButton}"/>-->
+                <Button Grid.Column="2" Grid.Row="2" x:Name="btnAbout" Text="{helpers:Translate About}" Clicked="BtnAbout_OnClicked" Style="{DynamicResource TwoLineButton}"/>
+
+                <Button Grid.Column="1" Grid.Row="2"  x:Name="btnNews" Text="{helpers:Translate News}"  Clicked="BtnNews_OnClicked" Style="{DynamicResource TwoLineButton}"/>
+                <Button Grid.Column="2" Grid.Row="1"  x:Name="btnWhoAreWe" Text="{helpers:Translate WhoAreWe}"  Clicked="BtnWhoAreWe_OnClicked" Style="{DynamicResource TwoLineButton}"/>
+                <Label x:Name="lblOpening"  Text="{helpers:Translate OpeningTimes}" Grid.Column="0" Grid.ColumnSpan="4"  Grid.Row="3" HorizontalTextAlignment="Center" 
+                       TextColor="{DynamicResource TextColor}" VerticalOptions="CenterAndExpand" FontSize="Small" />
+                <Image x:Name="imgLogo" Source="{StaticResource LogoFile}" Grid.Row="4" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Grid.Column="0" Grid.ColumnSpan="4">
+                    <!--<Image>
+                        <OnPlatform x:TypeArguments="x:Boolean">
+                            <On Platform="Android, UWP">True</On>
+                            <On Platform="iOS">False</On>
+                        </OnPlatform>
+                    </Image>-->
+                </Image>
+                <Image x:Name="imgUK" Source="en_flag.jpg" Grid.Row="5" VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="1" Aspect="AspectFit" IsVisible="False">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="English_OnTapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image x:Name="imgES" Source="es_flag.jpg" Grid.Row="5" VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="2" Aspect="AspectFit" IsVisible="False">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Spanish_OnTapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <!--Add Flags Here -->
+                <Grid x:Name="grdFlags" IsVisible="False" VerticalOptions="Fill" HorizontalOptions="Fill" Padding="8,4,8,8" RowSpacing="4" ColumnSpacing="8" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="4" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="8"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="8"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="8"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="8"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25"/>
+                    </Grid.RowDefinitions>
+                
+                <Image x:Name="imgDE" Source="de_flag.jpg" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="1" Aspect="AspectFill" IsVisible="True">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="German_OnTapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image x:Name="imgAR" Source="ar_flag.jpg" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="3" Aspect="AspectFit" IsVisible="True">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Arabic_OnTapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image x:Name="imgFR" Source="fr_flag.jpg" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="5" Aspect="AspectFit" IsVisible="True">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="French_OnTapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image x:Name="imgUKios" Source="en_flag.jpg" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Start" Grid.Column="1" Aspect="AspectFit" IsVisible="False" HeightRequest="32" WidthRequest="44">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="English_OnTapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image x:Name="imgESios" Source="es_flag.jpg" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="End" Grid.Column="2" IsVisible="False" HeightRequest="32" WidthRequest="44">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Spanish_OnTapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </Grid>
+            </Grid>
+        </ScrollView>
+    </Grid>
+</ContentPage>

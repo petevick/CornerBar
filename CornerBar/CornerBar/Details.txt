@@ -1,0 +1,16 @@
+www|facebook.com/cornerbaraddaia/
+tripadvisor|https://www.tripadvisor.co.uk/Restaurant_Review-g1916968-d9846333-Reviews-Corner_Cafe_Bar-Port_d_Addaia_Minorca_Balearic_Islands.html
+twitter|http://twitter.com/cornerbaraddaia
+facebook|https://www.facebook.com/cornerbaraddaia/
+address|Centro Comercial Port Addaia, 07740 Port d'Addaia
+phone|(+34) 609 - 004521
+directions|https://www.google.com/maps/dir//Carrer+Hort+des+Lle%C3%B3,+11,+07740+Puerto+Luz,+Illes+Balears,+Spain/@40.006973,4.192685,181m/data=!3m1!1e3!4m9!4m8!1m0!1m5!1m1!1s0x12be25caca0bdf5b:0xb242babbbae83fe3!2m2!1d4.1925983!2d40.0068972!3e0?hl=en-GB
+email|ccbaddaia@gmail.com
+googlemap|https://www.google.co.uk/maps/place/Corner+Bar+Tapas+%26+Copas/@40.0067266,4.1895534,16z/data=!4m5!3m4!1s0x12be25caeb7db531:0x9e24c5cc882c7d02!8m2!3d40.0067266!4d4.1939308
+name|Corner Bar
+newslink|http://www.gui-innovations.com/News/CornerBarNews.html
+phonetodial|+34609004521
+closedon|Tuesday
+startbooking|12,0,0
+endbooking|23,0,0
+multilang|Y

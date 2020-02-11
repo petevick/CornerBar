@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<EmployeeArray xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Employee>
+    <Name>Natalia</Name>
+    <Photo>Natalia.jpg</Photo>
+    <Details>The hub of the Corner Bar</Details>
+  </Employee>
+  <Employee>
+    <Name>Ruth</Name>
+    <Photo>Ruth.jpg</Photo>
+    <Details>The smiling face of the Corner Bar</Details>
+  </Employee>
+</EmployeeArray>

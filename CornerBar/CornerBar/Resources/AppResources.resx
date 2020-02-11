@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Book" xml:space="preserve">
+    <value>Book A Table</value>
+  </data>
+  <data name="BookingDate" xml:space="preserve">
+    <value>Booking Date</value>
+  </data>
+  <data name="BookIt" xml:space="preserve">
+    <value>Book It!</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>Contact Us</value>
+  </data>
+  <data name="email" xml:space="preserve">
+    <value>email</value>
+  </data>
+  <data name="emailUS" xml:space="preserve">
+    <value>email Us </value>
+  </data>
+  <data name="MailMess" xml:space="preserve">
+    <value>Hi !P4,!CRPlease could I book a table for !P1 people on !P2 at !P3. !CR</value>
+  </data>
+  <data name="MailMessEmail" xml:space="preserve">
+    <value> and my email address is !P1</value>
+  </data>
+  <data name="MailMessOcc" xml:space="preserve">
+    <value>!CRThis is to celebrate !P1</value>
+  </data>
+  <data name="MailMessTel" xml:space="preserve">
+    <value>!CRMy telephone number is !P1</value>
+  </data>
+  <data name="Occasion" xml:space="preserve">
+    <value>Occasion</value>
+  </data>
+  <data name="OrderDrinks" xml:space="preserve">
+    <value>Order Drinks</value>
+  </data>
+  <data name="OurMenu" xml:space="preserve">
+    <value>Our Menu</value>
+  </data>
+  <data name="People" xml:space="preserve">
+    <value>Number of people</value>
+  </data>
+  <data name="PhoneUS" xml:space="preserve">
+    <value>Phone Us</value>
+  </data>
+  <data name="Telephone" xml:space="preserve">
+    <value>Telephone</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="ContactBlurb" xml:space="preserve">
+    <value>If you have any questions or queries, please don't hesitate to contact us via email or phone</value>
+  </data>
+  <data name="Occasions" xml:space="preserve">
+    <value>None|an Anniversary|a Birthday|a Party|a Celebration|an End of holiday meal|a good night out|Other</value>
+  </data>
+  <data name="OurAddress" xml:space="preserve">
+    <value>Our Address</value>
+  </data>
+  <data name="Directions" xml:space="preserve">
+    <value>Directions</value>
+  </data>
+  <data name="GetHere" xml:space="preserve">
+    <value>Get Here </value>
+  </data>
+  <data name="WebSite" xml:space="preserve">
+    <value>Web Site </value>
+  </data>
+  <data name="About1" xml:space="preserve">
+    <value>From tasty homemade food, prepared and cooked by our talented chefs to a selection of specials including:-!CR Paella!CRJuicy Steaks!CRFresh Fish!CRBreakfast from 10am</value>
+  </data>
+  <data name="About2" xml:space="preserve">
+    <value>Helen's world famous Fish 'n' Chips can only be eaten on a Wednesday. Using her secret recipe for beer batter, it keeps the crowds coming back in the masses! (Booking advisable)</value>
+  </data>
+  <data name="About3" xml:space="preserve">
+    <value>We offer our customers... !CR5 HD T.Vs, Free Internet, Sky HD (including BBC, ITV, C4), Pool table, Dart Board, Tennis Court (€10 per hour),Quiz Nights, CashBack, Money Exchange, Mobile Phone Top Up, Take Away Food...!CR</value>
+  </data>
+  <data name="Blurb1" xml:space="preserve">
+    <value>El Castillo is now in its 11th year, and would like to say a big thank you to all of our customers who have supported us.!CR!CROur food is constantly being improved, our staff are always trying their best to make the whole Castillo experience a memorable one.!CR!CRFrom tasty homemade food, prepared and cooked by our talented chefs to a selection of specials including:-!CR Paella!CRJuicy Steaks!CRFresh Fish!CRBreakfast from 10am!CR!CRWe offer our customers... !CR5 HD T.Vs, Free Internet, Sky HD (including BBC, ITV, C4), Pool table, Dart Board, Tennis Court (€10 per hour),Quiz Nights, CashBack, Money Exchange, Mobile Phone Top Up, Take Away Food...!CR!CRHelen's world famous Fish 'n' Chips can only be eaten on a Wednesday, so click at the top to make a booking!!CRWe are open every day from 10am until late!</value>
+  </data>
+  <data name="Blurb2" xml:space="preserve">
+    <value>!CREverything on our menu is available to take away, You can order by phone and pay on collection.!CR!CRBooking is recommended either by this app, email, phone or good old fashioned coming into the bar.!CR!CRRead the reviews about us on tripadvisor by clicking the tripadvisor logo on our contact page.!CR!CRWe cater for vegeterians and large groups, just drop us a line about specifications.!CR!CRIf you enjoy your experience here please tell your friends - if you don't PLEASE tell us - Thanks.!CR</value>
+  </data>
+  <data name="Head1" xml:space="preserve">
+    <value>GREAT FOOD</value>
+  </data>
+  <data name="Head2" xml:space="preserve">
+    <value>FISH'N'CHIPS</value>
+  </data>
+  <data name="Head3" xml:space="preserve">
+    <value>THINGS WE DO</value>
+  </data>
+  <data name="MailMessThanks" xml:space="preserve">
+    <value>!CRThank You!CR</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="InvalidBook" xml:space="preserve">
+    <value>Sorry - we only accept bookings between 12pm and 11pm - Thanks</value>
+  </data>
+  <data name="InvalidBookCap" xml:space="preserve">
+    <value>Incorrect Time</value>
+  </data>
+  <data name="MissingEmail" xml:space="preserve">
+    <value>Please enter a valid email address - Thanks</value>
+  </data>
+  <data name="MissingEmailCap" xml:space="preserve">
+    <value>Missing email</value>
+  </data>
+  <data name="MissingPhone" xml:space="preserve">
+    <value>Please enter a valid phone number - Thanks</value>
+  </data>
+  <data name="MissingPhoneCap" xml:space="preserve">
+    <value>Missing phone number</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="IsClosed" xml:space="preserve">
+    <value>You are trying to book for a !P1 and we are closed on a !P1</value>
+  </data>
+  <data name="IsClosedCap" xml:space="preserve">
+    <value>Closed !P1</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="TooEarly" xml:space="preserve">
+    <value>You are trying to book a time in the past - unless you are travelling in a DeLorean, please try again - Thanks</value>
+  </data>
+  <data name="TooEarlyCap" xml:space="preserve">
+    <value>Already Gone</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="News" xml:space="preserve">
+    <value>News</value>
+  </data>
+  <data name="WhoAreWe" xml:space="preserve">
+    <value>Who Are We?</value>
+  </data>
+  <data name="InvalidPhone" xml:space="preserve">
+    <value>This doesn't appear to be a valid phone number - are you sure it is correct?</value>
+  </data>
+  <data name="AreYouSure" xml:space="preserve">
+    <value>Are You Sure?</value>
+  </data>
+  <data name="Invalidemail" xml:space="preserve">
+    <value>This doesn't appear to be a valid email address - are you sure it is correct?</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="Wednesday" xml:space="preserve">
+    <value>Wednesday</value>
+  </data>
+  <data name="BookFandC" xml:space="preserve">
+    <value>Book for Fish 'n' Chips</value>
+  </data>
+  <data name="FinalAbout" xml:space="preserve">
+    <value>!CRWe are open every day except Tuesday from !CR12pm until late!!CR!CR</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Version !P1!CR!CR</value>
+  </data>
+  <data name="BookingConf" xml:space="preserve">
+    <value>We will send you an email confirming your booking - Thanks!!</value>
+  </data>
+  <data name="BookingConfCap" xml:space="preserve">
+    <value>Booking email sent</value>
+  </data>
+  <data name="BookingFail" xml:space="preserve">
+    <value>Sorry - we were unable to email your booking request. Can you try again, or try phoning us - Thanks!!</value>
+  </data>
+  <data name="BookingFailCap" xml:space="preserve">
+    <value>Booking email failed</value>
+  </data>
+  <data name="Page1" xml:space="preserve">
+    <value>MenuEN1.jpg</value>
+  </data>
+  <data name="Page1Desc" xml:space="preserve">
+    <value>Corner Café Bar</value>
+  </data>
+  <data name="Page2" xml:space="preserve">
+    <value>MenuEN2.jpg</value>
+  </data>
+  <data name="Page2Desc" xml:space="preserve">
+    <value>Gastro Tapas</value>
+  </data>
+  <data name="Page3" xml:space="preserve">
+    <value>MenuEN3.jpg</value>
+  </data>
+  <data name="Page3Desc" xml:space="preserve">
+    <value>Mains and Desserts</value>
+  </data>
+  <data name="Page4" xml:space="preserve">
+    <value>MenuEN4.jpg</value>
+  </data>
+  <data name="Page4Desc" xml:space="preserve">
+    <value>Vegetarian</value>
+  </data>
+  <data name="Page5" xml:space="preserve">
+    <value>MenuEN5.jpg</value>
+  </data>
+  <data name="Page5Desc" xml:space="preserve">
+    <value>Paellas - Rices (Take away available)</value>
+  </data>
+  <data name="Page6" xml:space="preserve">
+    <value>MenuEN6.jpg</value>
+  </data>
+  <data name="Page6Desc" xml:space="preserve">
+    <value>Bebidas - Drinks - Signature Cocktails</value>
+  </data>
+  <data name="Friday" xml:space="preserve">
+    <value>Friday</value>
+  </data>
+  <data name="Monday" xml:space="preserve">
+    <value>Monday</value>
+  </data>
+  <data name="Saturday" xml:space="preserve">
+    <value>Saturday</value>
+  </data>
+  <data name="Sunday" xml:space="preserve">
+    <value>Sunday</value>
+  </data>
+  <data name="Thursday" xml:space="preserve">
+    <value>Thursday</value>
+  </data>
+  <data name="Tuesday" xml:space="preserve">
+    <value>Tuesday</value>
+  </data>
+  <data name="AboutBlurb" xml:space="preserve">
+    <value>Homemade tapas bar in Port Addaia, with the very best fresh ingredients offering delicious &amp; tasty tapas. !CRRecently refurbished with sea view from terrace.</value>
+  </data>
+  <data name="OpeningTimes" xml:space="preserve">
+    <value>We are open every day except Tuesday from 12pm until late!</value>
+  </data>
+  <data name="YouChose" xml:space="preserve">
+    <value>YouChose</value>
+  </data>
+</root>

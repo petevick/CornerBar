@@ -1,0 +1,76 @@
+<!--<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:forms="clr-namespace:InTheHand.Forms;assembly=CornerBar" xmlns:formscontrols="clr-namespace:CornerBar.Forms.Controls;assembly=RWB" xmlns:converters="clr-namespace:CornerBar.Converters;assembly=CornerBar" xmlns:controls="clr-namespace:CornerBar.Controls;assembly=CornerBar" x:Class="CornerBar.App" xmlns:d="http://schemas.microsoft.com/expression/blend/2008">-->
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:converters="clr-namespace:CornerBar.Converters;assembly=CornerBar" x:Class="CornerBar.App" xmlns:d="http://schemas.microsoft.com/expression/blend/2008">
+  <Application.Resources>
+    <ResourceDictionary>
+      <converters:HeaderTextConverter x:Key="HeaderText" />
+      <converters:DetailTextConverter x:Key="DetailText" />
+      <x:String x:Key="LogoFile">Logo.png</x:String>
+      <x:String x:Key="NormalBackgroundImage">BackgroundImage.png</x:String>
+      <Color x:Key="LightForegroundColor">#FFFFFF</Color>
+      <!--<Color x:Key="StdButtonBack">#211F20</Color>-->
+            <Color x:Key="StdButtonBack">#FF0000</Color>
+            <Color x:Key="StdButtonText">#FFFFFF</Color>
+      <Color x:Key="StdButtonBorder">#1E4759</Color>
+      <Color x:Key="TextColor">#211F20</Color>
+      <Color x:Key="PickerTextColor">#211F20</Color>
+      <Color x:Key="DarkForegroundColor">#1E4759</Color>
+      <Color x:Key="VersionForegroundColor">#000000</Color>
+      <Color x:Key="GlobalBackground">#F0F0F0</Color>
+      <OnPlatform x:TypeArguments="Font" Android="Medium" iOS="Small" WinPhone="Small" x:Key="ButtonFont" />
+      <!--<OnPlatform x:TypeArguments="FontFamily" Android="Arial" iOS="Sevigne Thin" WinPhone="Arial" x:Key="SevigneThin"/>-->
+      <!--<Color x:Key="ActivityColour" TargetType="ActivityIndicator">
+          <Setter Property="Color" Value="Red" />
+        </Color>-->
+      <Style x:Key="ActivityIndicatorStyle" TargetType="ActivityIndicator">
+        <Setter Property="HeightRequest">
+          <Setter.Value>
+            <OnPlatform x:TypeArguments="x:Double" Android="160" iOS="64"/>
+          </Setter.Value>
+        </Setter>
+          <Setter Property="WidthRequest">
+            <Setter.Value>
+              <OnPlatform x:TypeArguments="x:Double" Android="160" iOS="64"/>
+            </Setter.Value>
+          </Setter>
+        <Setter Property="Color" Value="{StaticResource LightForegroundColor}" />
+      </Style>
+      
+      <Style TargetType="Label" >
+        <Setter Property="FontFamily" Value="Gill Sans MT Light"/>
+      </Style>
+
+      
+      <Style x:Key="StandardButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{DynamicResource StdButtonBack}"/>
+                <Setter Property="TextColor"  Value="{DynamicResource StdButtonText}"/>
+        <Setter Property="FontSize" Value="Small"/>
+        <Setter Property="HeightRequest" Value="40"/>
+                <Setter Property="BorderColor" Value="{DynamicResource StdButtonBorder}"/>
+        <Setter Property="BorderRadius" Value="4"/>
+        <Setter Property="BorderWidth" Value="1"/>
+      </Style>
+
+      <Style x:Key="TwoLineButton" TargetType="Button">
+          <Setter Property="BackgroundColor" Value="{DynamicResource StdButtonBack}"/>
+          <Setter Property="TextColor"  Value="{DynamicResource StdButtonText}"/>
+          <Setter Property="FontSize" Value="Small"/>
+          <Setter Property="HeightRequest" Value="48"/>
+          <Setter Property="BorderColor" Value="{DynamicResource StdButtonBorder}"/>
+          <Setter Property="BorderRadius" Value="4"/>
+          <Setter Property="BorderWidth" Value="1"/>
+      </Style>
+
+      <Style x:Key="StandardButtonMedium" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{DynamicResource StdButtonBack}"/>
+                <Setter Property="TextColor"  Value="{DynamicResource StdButtonText}"/>
+                <Setter Property="FontSize" Value="Medium"/>
+        <Setter Property="HeightRequest" Value="40"/>
+                <Setter Property="BorderColor" Value="{DynamicResource StdButtonBorder}"/>
+        <Setter Property="BorderRadius" Value="4"/>
+        <Setter Property="BorderWidth" Value="1"/>
+      </Style>
+        
+     
+    </ResourceDictionary>
+  </Application.Resources>
+</Application>

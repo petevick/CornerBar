@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:CornerBar.Models;assembly=CornerBar"
+             xmlns:helpers="clr-namespace:CornerBar.Helpers;assembly=CornerBar"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="CornerBar.Forms.News">
+  <ContentPage.Padding>
+      <OnPlatform x:TypeArguments="Thickness">
+          <On Platform="Android">0,0,0,0</On>
+          <On Platform="iOS">0,20,0,0</On>
+          <On Platform="UWP, WinPhone">0,0,0,0</On>
+      </OnPlatform>
+    </ContentPage.Padding>
+  <Grid VerticalOptions="Fill" HorizontalOptions="Fill" RowSpacing="0" BackgroundColor="White">
+    <Grid.BindingContext>
+      <models:MainPageViewModel />
+    </Grid.BindingContext>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="10"/>
+      <ColumnDefinition Width="*"/>
+      <ColumnDefinition Width="10"/>
+    </Grid.ColumnDefinitions>
+    <Image x:Name="imgLogo" Source="{StaticResource LogoFile}" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="1"  />
+    <Label x:Name="lblHeading" Text="{helpers:Translate News}"  Grid.Column="1" Grid.Row="1"  HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Large" TextColor="{DynamicResource TextColor}"/>
+    <Grid Grid.Row="2" Grid.Column="1" >
+    <!--<ScrollView >-->
+      <WebView x:Name="lblNews" Navigating="LblNews_OnNavigating" Navigated="LblNews_OnNavigated"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+    <!--</ScrollView>-->
+    </Grid>
+  </Grid>
+</ContentPage>

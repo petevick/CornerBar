@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <style name="Theme.Splash" parent="android:Theme">
+    <item name="android:windowBackground">@color/SplashWhite</item>
+    <item name="android:windowNoTitle">true</item>
+  </style>
+
+  <style name="Theme.CornerBarApp" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+    <item name="android:windowBackground">@color/BackgroundWhite</item>
+  </style>
+  <color name="SplashWhite">#FFFFFF</color>
+  <color name="BackgroundWhite">#FFFFFF</color>
+</resources>
