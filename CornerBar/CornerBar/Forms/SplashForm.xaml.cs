@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using System.Threading;
+using CornerBar.Classes;
 using CornerBar.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -20,7 +21,7 @@ namespace CornerBar.Forms{
           InitializeComponent();
           
           Debug.WriteLine("Debug: " +"Screen size: {0}x{1}", App.ScreenSize.Width, App.ScreenSize.Height);
-
+          Utilities.open_close_page("Open", this.GetType().Name);
 
         }
 
@@ -46,7 +47,11 @@ namespace CornerBar.Forms{
             
            
         }
+        protected override void OnDisappearing()
+        {
+            Utilities.open_close_page("Close", this.GetType().Name);
+            base.OnDisappearing();
+        }
 
-
-  }
+    }
 }

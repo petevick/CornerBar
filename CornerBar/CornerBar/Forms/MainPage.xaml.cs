@@ -10,13 +10,13 @@ using CarouselPageNavigation;
 using CornerBar.Classes;
 using CornerBar.Helpers;
 using CornerBar.Forms;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 using Plugin.Settings;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Parsing;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
-//using System.Reflection;
 
 namespace CornerBar.Forms
 {
@@ -31,7 +31,7 @@ namespace CornerBar.Forms
         public MainPage()
         {
             InitializeComponent();
-
+            Utilities.open_close_page("Open", this.GetType().Name);
             //if (Device.OS == TargetPlatform.iOS)
             //{
             //    NavigationPage.SetHasNavigationBar(this, true);
@@ -66,7 +66,7 @@ namespace CornerBar.Forms
                 return;
             }
             App.pressed = true;
-
+            Analytics.TrackEvent("Menu Button Pressed");
             // ...
             // use for debugging, not in released app code!
             //var assembly = typeof(MainPage).GetTypeInfo().Assembly;
@@ -103,7 +103,7 @@ namespace CornerBar.Forms
                 return;
             }
             App.pressed = true;
-  
+            Analytics.TrackEvent("Book Button Pressed");
             Navigation.PushAsync(new BookATable(""));
 
         }
@@ -115,6 +115,7 @@ namespace CornerBar.Forms
                 return;
             }
             App.pressed = true;
+            Analytics.TrackEvent("Contact Button Pressed");
             Navigation.PushAsync(new ContactUs());
  
         }
@@ -126,6 +127,7 @@ namespace CornerBar.Forms
                 return;
             }
             App.pressed = true;
+            Analytics.TrackEvent("News Button Pressed");
             Navigation.PushAsync(new News());
 
         }
@@ -139,6 +141,7 @@ namespace CornerBar.Forms
         protected override void OnDisappearing()
         {
             isActive = false;
+            Utilities.open_close_page("Close", this.GetType().Name);
             base.OnDisappearing();
         }
 
@@ -191,6 +194,7 @@ namespace CornerBar.Forms
                 return;
             }
             App.pressed = true;
+            Analytics.TrackEvent("Menu Button Pressed");
             Navigation.PushAsync(new AboutUs());
            
         }
@@ -316,7 +320,7 @@ namespace CornerBar.Forms
                 return;
             }
             App.pressed = true;
-
+            Analytics.TrackEvent("Who Are We Button Pressed");
             Navigation.PushAsync(new WhoAreWe());
 
         }
@@ -336,6 +340,11 @@ namespace CornerBar.Forms
         {
             App.Set_Language("ar-AE");
             refresh_labels();
+        }
+
+        private void Generate_Error(object sender, EventArgs e)
+        {
+           
         }
     }
 }

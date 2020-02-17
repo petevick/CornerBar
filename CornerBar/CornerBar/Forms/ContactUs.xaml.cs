@@ -26,7 +26,7 @@ namespace CornerBar.Forms
             {
                 NavigationPage.SetHasNavigationBar(this, true);
             }
-            
+            Utilities.open_close_page("Open", this.GetType().Name);
         }
         protected override void OnAppearing()
         {
@@ -132,6 +132,11 @@ namespace CornerBar.Forms
             Uri mapUri = new Uri(DetailsExtension.DetailsManager.Details("googlemap"));
             Device.OpenUri(mapUri);
             Utilities.Enable_Image((Image)sender, true);
+        }
+        protected override void OnDisappearing()
+        {
+            Utilities.open_close_page("Close", this.GetType().Name);
+            base.OnDisappearing();
         }
     }
 }

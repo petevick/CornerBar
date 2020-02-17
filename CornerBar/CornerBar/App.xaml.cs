@@ -16,16 +16,19 @@ using System.Xml.Serialization;
 using CornerBar.Classes;
 using CornerBar.Helpers;
 using CornerBar.Models;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 using Plugin.Settings;
 using Plugin.Settings.Abstractions;
 using Xamarin.Forms.Xaml;
+using Device = Xamarin.Forms.Device;
 
 
 namespace CornerBar
 {
     public partial class App : Application
     {
-        
         public static Size ScreenSize;
         public static CultureInfo Ci;
         public static string language = string.Empty;
@@ -35,7 +38,7 @@ namespace CornerBar
         public static string[] detailKey;
         public static string[] detailData;
         public static bool MultiLang = false;
-
+        public static DateTime openPage = DateTime.Now;
         private static ISettings AppSettings =>
             CrossSettings.Current;
         public App()
@@ -123,6 +126,7 @@ namespace CornerBar
 
         public static void Set_Language(string lang)
         {
+            AppCenterLog.Info("Language Change",lang);
             Ci = new CultureInfo(lang);
             CrossSettings.Current.AddOrUpdateValue("Language", lang);
             Set_Menuname(lang);
@@ -131,6 +135,8 @@ namespace CornerBar
             
             CultureInfo.DefaultThreadCurrentCulture = Ci;
             CultureInfo.DefaultThreadCurrentUICulture = Ci;
+
+
         }
 
         /// <exclude />
@@ -139,9 +145,11 @@ namespace CornerBar
             menuFilename = String.Format("menu{0}{1}.pdf", DateTime.Now.Year,lang.Substring(0,2));
             //menuFilename = String.Format("Menu{0}.png", lang.Substring(0, 2).ToUpper());
         }
-        protected override async void OnStart()
+        protected  override async void OnStart()
         {
-            
+
+           
+
         }
 
        

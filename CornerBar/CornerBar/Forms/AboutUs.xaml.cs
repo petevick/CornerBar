@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CornerBar.Classes;
 using CornerBar.Helpers;
 using CornerBar.Models;
 using CornerBar.Resources;
@@ -37,7 +38,7 @@ namespace CornerBar.Forms
                     this.Padding = new Thickness(0, 0, 0, 0);
                     break;
             }
-
+            Utilities.open_close_page("Open", this.GetType().Name);
             
             App.mv.BlurbCount = 1;
             
@@ -79,6 +80,7 @@ namespace CornerBar.Forms
 
         protected override void OnDisappearing()
         {
+            Utilities.open_close_page("Close", this.GetType().Name);
             isActive = false;
             base.OnDisappearing();
         }

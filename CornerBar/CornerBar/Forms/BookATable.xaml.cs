@@ -16,6 +16,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
 using System.Globalization;
+using CornerBar.Classes;
 
 namespace CornerBar.Forms
 {
@@ -39,7 +40,7 @@ namespace CornerBar.Forms
             {
                 NavigationPage.SetHasNavigationBar(this, true);
             }
-            
+            Utilities.open_close_page("Open", this.GetType().Name);
         }
 
 
@@ -384,6 +385,11 @@ namespace CornerBar.Forms
                 Debug.WriteLine(App.mv.BookingTime);
                 Debug.WriteLine(pckTime);
             }
+        }
+        protected override void OnDisappearing()
+        {
+            Utilities.open_close_page("Close", this.GetType().Name);
+            base.OnDisappearing();
         }
     }
     

@@ -31,6 +31,7 @@ namespace CornerBar.Forms
                 NavigationPage.SetHasNavigationBar(this, true);
             }
 
+            Utilities.open_close_page("Open", this.GetType().Name);
             var assembly = typeof(App).GetTypeInfo().Assembly;
             string filename = string.Format("CornerBar.Employees{0}.txt", App.language.ToUpper());
             Stream stream = assembly.GetManifestResourceStream(filename);

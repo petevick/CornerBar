@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AppCenter.Analytics;
 using Xamarin.Forms;
 
 namespace CornerBar.Classes
@@ -20,6 +21,12 @@ namespace CornerBar.Classes
         {
             img.IsEnabled = cond;
             await Task.Yield();
+        }
+
+        public static async void open_close_page(string function, string pagename)
+        {
+
+            
         }
     }
 }

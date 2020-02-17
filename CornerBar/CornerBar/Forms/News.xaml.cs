@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CornerBar.Classes;
 using CornerBar.Helpers;
 using CornerBar.Resources;
 using Xamarin.Forms;
@@ -23,7 +24,7 @@ namespace CornerBar.Forms
             }
             lblNews.Source = new Uri(DetailsExtension.DetailsManager.Details("newslink"));
             this.Content = lblNews;
-            
+            Utilities.open_close_page("Open", this.GetType().Name);
         }
 
         private void LblNews_OnNavigating(object sender, WebNavigatingEventArgs e)
@@ -42,6 +43,12 @@ namespace CornerBar.Forms
 
             base.OnAppearing();
             App.pressed = false;
+        }
+
+        protected override void OnDisappearing()
+        {
+            Utilities.open_close_page("Close", this.GetType().Name);
+            base.OnDisappearing();
         }
     }
 }

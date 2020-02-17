@@ -82,6 +82,9 @@
                 <Label x:Name="lblOpening"  Text="{helpers:Translate OpeningTimes}" Grid.Column="0" Grid.ColumnSpan="4"  Grid.Row="3" HorizontalTextAlignment="Center" 
                        TextColor="{DynamicResource TextColor}" VerticalOptions="CenterAndExpand" FontSize="Small" />
                 <Image x:Name="imgLogo" Source="{StaticResource LogoFile}" Grid.Row="4" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Grid.Column="0" Grid.ColumnSpan="4">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Generate_Error"/>
+                    </Image.GestureRecognizers>
                     <!--<Image>
                         <OnPlatform x:TypeArguments="x:Boolean">
                             <On Platform="Android, UWP">True</On>
