@@ -30,6 +30,9 @@ namespace CornerBar.Forms
 
         public MainPage()
         {
+
+
+
             InitializeComponent();
             Utilities.open_close_page("Open", this.GetType().Name);
             //if (Device.OS == TargetPlatform.iOS)
